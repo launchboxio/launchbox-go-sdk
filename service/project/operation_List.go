@@ -7,5 +7,5 @@ type ListProjectOutput struct {
 }
 
 func (c *Client) List(input *ListProjectInput) (*ListProjectOutput, error) {
-  return nil, nil
+	return nil, nil
 }
