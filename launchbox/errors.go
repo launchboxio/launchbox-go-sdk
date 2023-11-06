@@ -17,3 +17,9 @@ type ForbiddenError struct{}
 func (*ForbiddenError) Error() string {
 	return "Forbidden"
 }
+
+type ResourceNotFoundError struct{}
+
+func (*ResourceNotFoundError) Error() string {
+	return "Resource not found"
+}

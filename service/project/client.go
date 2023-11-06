@@ -1,7 +1,6 @@
 package project
 
 import (
-	"github.com/go-resty/resty/v2"
 	"github.com/launchboxio/launchbox-go-sdk/config"
 	"time"
 )
@@ -28,8 +27,6 @@ type Project struct {
 
 type Client struct {
 	cnf *config.Config
-
-	httpClient *resty.Client
 }
 
 func New(cnf *config.Config) *Client {

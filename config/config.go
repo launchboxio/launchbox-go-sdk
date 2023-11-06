@@ -55,6 +55,8 @@ func (c *Config) GetClient() (*resty.Client, error) {
 				return &launchbox.UnauthorizedError{}
 			case 403:
 				return &launchbox.ForbiddenError{}
+			case 404:
+				return &launchbox.ResourceNotFoundError{}
 			default:
 				return &launchbox.GenericError{}
 			}
@@ -62,7 +64,7 @@ func (c *Config) GetClient() (*resty.Client, error) {
 		return nil
 	})
 	client.OnError(func(request *resty.Request, err error) {
-		fmt.Println(err)
+		//fmt.Println(err)
 		//fmt.Println(request)
 	})
 	return client, nil
