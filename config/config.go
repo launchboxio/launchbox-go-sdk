@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"github.com/go-resty/resty/v2"
 	"github.com/launchboxio/launchbox-go-sdk/launchbox"
+	"os"
 )
 
 type Config struct {
@@ -18,9 +19,16 @@ func Default() (*Config, error) {
 	chain := launchbox.NewProviderChain()
 	credentials := chain.Resolve()
 
+	endpoint, hasEndpoint := os.LookupEnv("LAUNCHBOX_URL")
+	if hasEndpoint {
+		return &Config{
+			Credentials: credentials,
+			Endpoint:    endpoint,
+		}, nil
+	}
 	return &Config{
 		Credentials: credentials,
-		Endpoint:    "https://launchboxhq.io",
+		Endpoint:    "https://launchboxhq.io/api/v1",
 	}, nil
 }
 
@@ -54,7 +62,7 @@ func (c *Config) GetClient() (*resty.Client, error) {
 		return nil
 	})
 	client.OnError(func(request *resty.Request, err error) {
-		//fmt.Println(err)
+		fmt.Println(err)
 		//fmt.Println(request)
 	})
 	return client, nil
