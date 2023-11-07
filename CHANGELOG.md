@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.1.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.0.0...v1.1.0) (2023-11-07)
+
+
+### Features
+
+* **auth:** Fix provider chain to support client credentials ([4776bd2](https://github.com/launchboxio/launchbox-go-sdk/commit/4776bd292f5f7b09ab39a8743b5a8918597c280e))
+
 ## 1.0.0 (2023-11-07)
 
 
