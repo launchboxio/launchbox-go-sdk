@@ -1,6 +1,7 @@
 package config
 
 import (
+	"context"
 	"fmt"
 	"github.com/go-resty/resty/v2"
 	"github.com/launchboxio/launchbox-go-sdk/launchbox"
@@ -8,27 +9,29 @@ import (
 )
 
 type Config struct {
-	Credentials *launchbox.Credentials
+	CredentialsProvider launchbox.CredentialsProvider
 
 	Endpoint string
 
 	client *resty.Client
+
+	credentials *launchbox.Credentials
 }
 
 func Default() (*Config, error) {
 	chain := launchbox.NewProviderChain()
-	credentials := chain.Resolve()
+	provider := chain.Resolve()
 
 	endpoint, hasEndpoint := os.LookupEnv("LAUNCHBOX_URL")
 	if hasEndpoint {
 		return &Config{
-			Credentials: credentials,
-			Endpoint:    endpoint,
+			CredentialsProvider: provider,
+			Endpoint:            endpoint,
 		}, nil
 	}
 	return &Config{
-		Credentials: credentials,
-		Endpoint:    "https://launchboxhq.io/api/v1",
+		CredentialsProvider: provider,
+		Endpoint:            "https://launchboxhq.io/api/v1",
 	}, nil
 }
 
@@ -45,7 +48,15 @@ func (c *Config) GetClient() (*resty.Client, error) {
 		return nil
 	})
 	client.OnBeforeRequest(func(client *resty.Client, request *resty.Request) error {
-		request.Header.Add("Authorization", "Bearer "+c.Credentials.AccessToken)
+		if c.credentials == nil || c.credentials.Expired() {
+			creds, err := c.CredentialsProvider.Fetch(context.TODO())
+			if err != nil {
+				return err
+			}
+			c.credentials = &creds
+		}
+
+		request.Header.Add("Authorization", "Bearer "+c.credentials.AccessToken)
 		return nil
 	})
 	client.OnAfterResponse(func(client *resty.Client, response *resty.Response) error {
