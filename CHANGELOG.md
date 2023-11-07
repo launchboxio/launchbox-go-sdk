@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.2](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.1.1...v1.1.2) (2023-11-07)
+
+
+### Bug Fixes
+
+* **projects:** Support updating of projects ([bf37123](https://github.com/launchboxio/launchbox-go-sdk/commit/bf37123e3dcd4d32a823a406bd38b3922b5ed612))
+
 ### [1.1.1](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.1.0...v1.1.1) (2023-11-07)
 
 
