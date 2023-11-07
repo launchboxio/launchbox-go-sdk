@@ -12,11 +12,18 @@ const (
 	AccessTokenType                       = "ACCESS_TOKEN"
 )
 
+const DefaultTokenUrl = "https://launchboxhq.io/oauth/token"
+
+const (
+	LaunchboxTokenUrlEnvVar     = "LAUNCHBOX_TOKEN_URL"
+	LaunchboxClientIdEnvVar     = "LAUNCHBOX_CLIENT_ID"
+	LaunchboxClientSecretEnvVar = "LAUNCHBOX_CLIENT_SECRET"
+	LaunchboxAccessToken        = "LAUNCHBOX_ACCESS_TOKEN"
+)
+
+// Credentials represent the access credentials
+// provided to LaunchboxHQ
 type Credentials struct {
-	Type         CredentialsType
-	ClientId     string
-	ClientSecret string
-	IssuerUrl    string
 	AccessToken  string
 	RefreshToken string
 	Expires      time.Time
