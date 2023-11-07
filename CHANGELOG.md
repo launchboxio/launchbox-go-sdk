@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.1.1](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.1.0...v1.1.1) (2023-11-07)
+
+
+### Bug Fixes
+
+* **clusters:** Use PATCH /clusters instead of POST /ping ([56b1f50](https://github.com/launchboxio/launchbox-go-sdk/commit/56b1f507ca5b824b2941f35eaf1b74a3416c7509))
+
 ## [1.1.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.0.0...v1.1.0) (2023-11-07)
 
 
