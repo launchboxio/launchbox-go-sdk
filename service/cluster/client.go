@@ -21,6 +21,13 @@ type Cluster struct {
 	AgentLastPing   time.Time `json:"agent_last_ping,omitempty"`
 	AgentIdentifier string    `json:"agent_identifier,omitempty"`
 	AgentVersion    string    `json:"agent_version,omitempty"`
+
+	Credentials *ClientCredentials `json:"oauth_application,omitempty"`
+}
+
+type ClientCredentials struct {
+	ClientId     string `json:"uid"`
+	ClientSecret string `json:"secret"`
 }
 
 type Client struct {
