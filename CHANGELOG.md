@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.2.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.1.2...v1.2.0) (2023-11-08)
+
+
+### Features
+
+* **clusters:** When viewing clusters, return client credentials if populated ([0004c27](https://github.com/launchboxio/launchbox-go-sdk/commit/0004c27ff9e58819d70fdab107f8293f2308d0f6))
+
 ### [1.1.2](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.1.1...v1.1.2) (2023-11-07)
 
 
