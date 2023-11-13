@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.3.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.2.0...v1.3.0) (2023-11-13)
+
+
+### Features
+
+* SDK functionality for ProjectAddon management ([6589d41](https://github.com/launchboxio/launchbox-go-sdk/commit/6589d41176a6947fc6d7f400f84c82b1da5ef12b))
+
 ## [1.2.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.1.2...v1.2.0) (2023-11-08)
 
 
