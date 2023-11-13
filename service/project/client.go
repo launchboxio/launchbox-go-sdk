@@ -2,6 +2,7 @@ package project
 
 import (
 	"github.com/launchboxio/launchbox-go-sdk/config"
+	"github.com/launchboxio/launchbox-go-sdk/service/addon"
 	"time"
 )
 
@@ -23,6 +24,12 @@ type Project struct {
 
 	Host          string `json:"host"`
 	CaCertificate string `json:"ca_certificate"`
+}
+
+type ProjectAddon struct {
+	Id      int         `json:"id"`
+	AddonId int         `json:"addon_id"`
+	Addon   addon.Addon `json:"addon,omitempty"`
 }
 
 type Client struct {
