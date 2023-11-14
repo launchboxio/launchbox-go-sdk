@@ -1,10 +1,11 @@
 package project
 
 type CreateProjectInput struct {
-	Memory int    `json:"memory,omitempty"`
-	Cpu    int    `json:"cpu,omitempty"`
-	Disk   int    `json:"disk,omitempty"`
-	Name   string `json:"name"`
+	Memory    int    `json:"memory,omitempty"`
+	Cpu       int    `json:"cpu,omitempty"`
+	Disk      int    `json:"disk,omitempty"`
+	Name      string `json:"name"`
+	ClusterId int    `json:"cluster_id"`
 }
 
 type CreateProjectOutput struct {
