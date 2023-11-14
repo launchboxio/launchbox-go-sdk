@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.3.4](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.3...v1.3.4) (2023-11-14)
+
+
+### Bug Fixes
+
+* Flesh our clusters.update and clusters.delete ([c5a66e0](https://github.com/launchboxio/launchbox-go-sdk/commit/c5a66e0f6404b2e3e426314ecc3e050c981cbb4c))
+
 ### [1.3.3](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.2...v1.3.3) (2023-11-14)
 
 
