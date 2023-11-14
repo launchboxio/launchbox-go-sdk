@@ -10,6 +10,7 @@ type UpdateClusterInput struct {
 	Provider        string `json:"provider,omitempty"`
 	Region          string `json:"region,omitempty"`
 	Status          string `json:"status,omitempty"`
+	Domain          string `json:"domain,omitempty"`
 }
 
 type UpdateClusterOutput struct {
