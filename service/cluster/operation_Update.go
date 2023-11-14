@@ -9,6 +9,7 @@ type UpdateClusterInput struct {
 	Version         string `json:"version,omitempty"`
 	Provider        string `json:"provider,omitempty"`
 	Region          string `json:"region,omitempty"`
+	Status          string `json:"status,omitempty"`
 }
 
 type UpdateClusterOutput struct {
