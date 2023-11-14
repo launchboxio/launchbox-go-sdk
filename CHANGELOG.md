@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.3.3](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.2...v1.3.3) (2023-11-14)
+
+
+### Bug Fixes
+
+* Allow setting of cluster ID when creating a project ([d1f62b9](https://github.com/launchboxio/launchbox-go-sdk/commit/d1f62b98a35f22fad07c2c1c806ede856057f3cd))
+
 ### [1.3.2](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.1...v1.3.2) (2023-11-14)
 
 
