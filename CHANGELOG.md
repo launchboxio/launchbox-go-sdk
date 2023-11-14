@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.3.1](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.0...v1.3.1) (2023-11-14)
+
+
+### Bug Fixes
+
+* Add status field to clusters.update ([8eb499c](https://github.com/launchboxio/launchbox-go-sdk/commit/8eb499c34a27279c6e6c20aac1b95895efb19d4e))
+
 ## [1.3.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.2.0...v1.3.0) (2023-11-13)
 
 
