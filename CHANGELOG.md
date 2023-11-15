@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.4.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.6...v1.4.0) (2023-11-15)
+
+
+### Features
+
+* Add GetProjectManifest ([051523c](https://github.com/launchboxio/launchbox-go-sdk/commit/051523c9a231dade3040db607d3cde1b539989bf))
+
+
+### Bug Fixes
+
+* Add user object as well ([736682c](https://github.com/launchboxio/launchbox-go-sdk/commit/736682cec858fd617b9e5e6cafe3aa9dc0ed5326))
+
 ### [1.3.6](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.5...v1.3.6) (2023-11-15)
 
 
