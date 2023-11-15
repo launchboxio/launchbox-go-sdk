@@ -3,13 +3,14 @@ package project
 import "strconv"
 
 type UpdateProjectInput struct {
-	ProjectId     int    `json:"-"`
-	Memory        int    `json:"memory,omitempty"`
-	Cpu           int    `json:"cpu,omitempty"`
-	Disk          int    `json:"disk,omitempty"`
-	Name          string `json:"name,omitempty"`
-	Status        string `json:"status,omitempty"`
-	CaCertificate string `json:"ca_certificate,omitempty"`
+	ProjectId         int    `json:"-"`
+	Memory            int    `json:"memory,omitempty"`
+	Cpu               int    `json:"cpu,omitempty"`
+	Disk              int    `json:"disk,omitempty"`
+	Name              string `json:"name,omitempty"`
+	Status            string `json:"status,omitempty"`
+	CaCertificate     string `json:"ca_certificate,omitempty"`
+	KubernetesVersion string `json:"kubernetes_version,omitempty"`
 }
 
 type UpdateProjectOutput struct {

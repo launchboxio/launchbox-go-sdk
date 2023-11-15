@@ -1,11 +1,12 @@
 package project
 
 type CreateProjectInput struct {
-	Memory    int    `json:"memory,omitempty"`
-	Cpu       int    `json:"cpu,omitempty"`
-	Disk      int    `json:"disk,omitempty"`
-	Name      string `json:"name"`
-	ClusterId int    `json:"cluster_id"`
+	Memory            int    `json:"memory,omitempty"`
+	Cpu               int    `json:"cpu,omitempty"`
+	Disk              int    `json:"disk,omitempty"`
+	Name              string `json:"name"`
+	ClusterId         int    `json:"cluster_id"`
+	KubernetesVersion string `json:"kubernetes_version,omitempty"`
 }
 
 type CreateProjectOutput struct {
