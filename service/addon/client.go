@@ -17,6 +17,17 @@ type Addon struct {
 	Status    string    `json:"status,omitempty"`
 	CreatedAt time.Time `json:"created_at,omitempty"`
 	UpdatedAt time.Time `json:"updated_at,omitempty"`
+
+	DefaultVersion *AddonVersion   `json:"default_version,omitempty"`
+	Versions       []*AddonVersion `json:"versions,omitempty"`
+}
+
+type AddonVersion struct {
+	Id        int    `json:"id"`
+	Version   string `json:"version"`
+	ClaimName string `json:"claim_name"`
+	Group     string `json:"group"`
+	Default   bool   `json:"default,omitempty"`
 }
 
 type Client struct {
