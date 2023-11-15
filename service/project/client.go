@@ -13,9 +13,10 @@ type Project struct {
 	Slug      string `json:"slug"`
 	ClusterId int    `json:"cluster_id"`
 
-	Memory int `json:"memory"`
-	Cpu    int `json:"cpu"`
-	Disk   int `json:"disk"`
+	Memory            int    `json:"memory"`
+	Cpu               int    `json:"cpu"`
+	Disk              int    `json:"disk"`
+	KubernetesVersion string `json:"kubernetes_version,omitempty"`
 
 	LastPausedAt  time.Time `json:"last_paused_at"`
 	LastStartedAt time.Time `json:"last_started_at"`
