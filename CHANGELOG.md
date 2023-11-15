@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.4.1](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.4.0...v1.4.1) (2023-11-15)
+
+
+### Bug Fixes
+
+* Add version fields to addon response ([30b27f0](https://github.com/launchboxio/launchbox-go-sdk/commit/30b27f0dfaaa0353707108fa20ea9f8d71fff4fe))
+
 ## [1.4.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.6...v1.4.0) (2023-11-15)
 
 
