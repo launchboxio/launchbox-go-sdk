@@ -24,6 +24,11 @@ type Manifest struct {
 	Disk               int                 `json:"disk"`
 	KubernetesVersion  string              `json:"kubernetes_version,omitempty"`
 	AddonSubscriptions []AddonSubscription `json:"addon_subscriptions"`
+	User               User                `json:"user"`
+}
+
+type User struct {
+	Email string `json:"email"`
 }
 
 type AddonSubscription struct {
