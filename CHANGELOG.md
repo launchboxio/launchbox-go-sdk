@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+### [1.3.6](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.5...v1.3.6) (2023-11-15)
+
+
+### Bug Fixes
+
+* Add kubernetes_version to both projects.create and projects.update ([00eb57a](https://github.com/launchboxio/launchbox-go-sdk/commit/00eb57ad19511fe85a83402108a16734a9d2edda))
+
 ### [1.3.5](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.3.4...v1.3.5) (2023-11-15)
 
 
