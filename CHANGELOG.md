@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.7.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.6.0...v1.7.0) (2023-11-21)
+
+
+### Features
+
+* Use connected repos, attach services to those instead ([d262e7b](https://github.com/launchboxio/launchbox-go-sdk/commit/d262e7bb9e52eb0e4bab64a1f40752b3bae10b7a))
+
 ## [1.6.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.5.0...v1.6.0) (2023-11-21)
 
 
