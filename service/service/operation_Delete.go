@@ -3,7 +3,8 @@ package service
 import "strconv"
 
 type DeleteServiceInput struct {
-	ServiceId int
+	RepositoryId int
+	ServiceId    int
 }
 
 type DeleteServiceOutput struct {
@@ -17,6 +18,6 @@ func (c *Client) Delete(input *DeleteServiceInput) (*DeleteServiceOutput, error)
 	}
 	_, err = client.R().
 		SetResult(result).
-		Delete("services/" + strconv.Itoa(input.ServiceId))
+		Delete("repositories/" + strconv.Itoa(input.RepositoryId) + "/services/" + strconv.Itoa(input.ServiceId))
 	return result, err
 }

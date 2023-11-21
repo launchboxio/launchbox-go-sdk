@@ -3,7 +3,8 @@ package service
 import "strconv"
 
 type GetServiceInput struct {
-	ServiceId int
+	RepositoryId int
+	ServiceId    int
 }
 
 type GetServiceOutput struct {
@@ -18,6 +19,6 @@ func (c *Client) Get(input *GetServiceInput) (*GetServiceOutput, error) {
 	}
 	_, err = client.R().
 		SetResult(result).
-		Get("services/" + strconv.Itoa(input.ServiceId))
+		Get("repositories/" + strconv.Itoa(input.RepositoryId) + "/services/" + strconv.Itoa(input.ServiceId))
 	return result, err
 }

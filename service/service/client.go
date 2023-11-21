@@ -6,13 +6,9 @@ import (
 )
 
 type Service struct {
-	Id              int    `json:"id"`
-	Name            string `json:"name,omitempty"`
-	FullName        string `json:"full_name"`
-	DefaultBranch   string `json:"default_branch,omitempty"`
-	Visibility      string `json:"visibility,omitempty"`
-	Language        string `json:"language,omitempty"`
-	VcsConnectionId int    `json:"vcs_connection_id,omitempty"`
+	Id           int    `json:"id"`
+	Name         string `json:"name,omitempty"`
+	RepositoryId int    `json:"repository_id"`
 
 	DeploymentStrategy string `json:"deployment_strategy,omitempty"`
 	UpdateStrategy     string `json:"update_strategy,omitempty"`
