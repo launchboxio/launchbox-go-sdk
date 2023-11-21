@@ -1,4 +1,4 @@
-package user
+package repository
 
 type ListVcsConnectionsInput struct {
 }

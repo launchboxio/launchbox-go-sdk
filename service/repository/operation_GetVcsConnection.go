@@ -1,6 +1,8 @@
-package user
+package repository
 
-import "strconv"
+import (
+	"strconv"
+)
 
 type GetVcsConnectionInput struct {
 	VcsConnectionId int
@@ -10,7 +12,7 @@ type GetVcsConnectionOutput struct {
 	VcsConnection *VcsConnection `json:"vcs_connection"`
 }
 
-func (c *Client) Get(input *GetVcsConnectionInput) (*GetVcsConnectionOutput, error) {
+func (c *Client) GetVcsConnection(input *GetVcsConnectionInput) (*GetVcsConnectionOutput, error) {
 	result := &GetVcsConnectionOutput{}
 	client, err := c.cnf.GetClient()
 	if err != nil {

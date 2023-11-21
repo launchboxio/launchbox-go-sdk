@@ -3,8 +3,12 @@ package service
 import "strconv"
 
 type UpdateServiceInput struct {
-	ServiceId int    `json:"-"`
-	Name      string `json:"name"`
+	ServiceId    int `json:"-"`
+	RepositoryId int `json:"-"`
+
+	Name               string `json:"name"`
+	DeploymentStrategy string `json:"deployment_strategy,omitempty"`
+	UpdateStrategy     string `json:"update_strategy,omitempty"`
 }
 
 type UpdateServiceOutput struct {
@@ -25,6 +29,6 @@ func (c *Client) Update(input *UpdateServiceInput) (*UpdateServiceOutput, error)
 	_, err = client.R().
 		SetResult(result).
 		SetBody(payload).
-		Patch("services/" + strconv.Itoa(input.ServiceId))
+		Patch("repositories" + strconv.Itoa(input.RepositoryId) + "/services/" + strconv.Itoa(input.ServiceId))
 	return result, err
 }

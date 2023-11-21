@@ -1,9 +1,13 @@
 package service
 
+import "strconv"
+
 type CreateServiceInput struct {
-	Name            string `json:"name,omitempty"`
-	FullName        string `json:"full_name"`
-	VcsConnectionId int    `json:"vcs_connection_id"`
+	RepositoryId int `json:"repository_id"`
+
+	Name               string `json:"name,omitempty"`
+	DeploymentStrategy string `json:"deployment_strategy,omitempty"`
+	UpdateStrategy     string `json:"update_strategy_strategy,omitempty"`
 }
 
 type CreateServiceOutput struct {
@@ -24,6 +28,6 @@ func (c *Client) Create(input *CreateServiceInput) (*CreateServiceOutput, error)
 	_, err = client.R().
 		SetResult(result).
 		SetBody(payload).
-		Post("services")
+		Post("repositories/" + strconv.Itoa(input.RepositoryId) + "/services")
 	return result, err
 }
