@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.6.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.5.0...v1.6.0) (2023-11-21)
+
+
+### Features
+
+* Add ProjectService subscription endpoints ([758edee](https://github.com/launchboxio/launchbox-go-sdk/commit/758edee8aee1dff3c41b907d0fd7d77c288de962))
+
 ## [1.5.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.4.1...v1.5.0) (2023-11-21)
 
 
