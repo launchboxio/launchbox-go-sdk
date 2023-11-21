@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file.
 
+## [1.5.0](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.4.1...v1.5.0) (2023-11-21)
+
+
+### Features
+
+* Add endpoints for vcs_connections ([092bcb6](https://github.com/launchboxio/launchbox-go-sdk/commit/092bcb61a5fc617784f499b42465cda731385b25))
+* Add service endpoints ([9193d26](https://github.com/launchboxio/launchbox-go-sdk/commit/9193d267a0fd1f1aa6bf75fe632fbf2a0e713c36))
+
 ### [1.4.1](https://github.com/launchboxio/launchbox-go-sdk/compare/v1.4.0...v1.4.1) (2023-11-15)
 
 
