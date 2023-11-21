@@ -3,6 +3,7 @@ package project
 import (
 	"github.com/launchboxio/launchbox-go-sdk/config"
 	"github.com/launchboxio/launchbox-go-sdk/service/addon"
+	"github.com/launchboxio/launchbox-go-sdk/service/service"
 	"time"
 )
 
@@ -31,6 +32,12 @@ type ProjectAddon struct {
 	Id      int         `json:"id"`
 	AddonId int         `json:"addon_id"`
 	Addon   addon.Addon `json:"addon,omitempty"`
+}
+
+type ProjectService struct {
+	Id        int             `json:"id"`
+	ServiceId int             `json:"service_id"`
+	Service   service.Service `json:"service,omitempty"`
 }
 
 type Client struct {
